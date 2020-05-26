@@ -99,7 +99,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: "images/SK1.jpg";
+		background: #555555;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after, body.is-resizing *, body.is-resizing *:before, body.is-resizing *:after {
@@ -2119,7 +2119,8 @@ input, select, textarea {
 		.image.main {
 			display: block;
 			margin: 0 0 3em 0;
-			width: 100%;
+			width: 200;
+			height: 200;
 		}
 
 			.image.main img {
@@ -2166,6 +2167,7 @@ input, select, textarea {
 		margin-left: auto;
 		margin-right: auto;
 		width: 30%;
+
 	}
 
 /* List */
@@ -2440,7 +2442,7 @@ input, select, textarea {
 
 	table {
 		margin: 0 0 2em 0;
-		width: 40%;
+		width: 50%;
 		padding-left: 40%;
 	}
 
@@ -2451,7 +2453,7 @@ input, select, textarea {
 		}
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(230, 235, 237, 0.25);
+				background-color: rgba(230, 235, 237, 0.329);
 			}
 
 		table td {
@@ -2459,11 +2461,11 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #3d4449;
+			color: #ffffff;
 			font-size: 0.9em;
 			font-weight: 600;
 			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
+			text-align: center;
 		}
 
 		table thead {
@@ -2506,8 +2508,11 @@ input, select, textarea {
 			}
 
 			div.tablacentral table {
+				margin-bottom: 30%;
+				margin-top: 10%;
 				margin: auto;
-  			text-align: left;
+				text-align: center;
+				color: #ffffff;
 			}
 
 /* Button */
@@ -3037,7 +3042,7 @@ input, select, textarea {
 		-ms-flex-direction: row-reverse;
 		flex-direction: row-reverse;
 		min-height: 100vh;
-		background-color: #424242;
+		background-color: #555555;
 	}
 
 /* Main */
@@ -3052,7 +3057,6 @@ input, select, textarea {
 		-ms-flex-shrink: 1;
 		flex-shrink: 1;
 		width: 100%;
-		background-image: url("images/skyrim.jpg");
 	}
 
 		#main > .inner {
