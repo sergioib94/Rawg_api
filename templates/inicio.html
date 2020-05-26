@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Rawg Database{% endblock %}
+{% block content %}
+<section>
+    <header class="main">
+        <h2>Menu principal</h2>
+    </header>
+
+    {% for i in games %}
+    <div class="image main">
+        <img src="{{i['background_image']}}" alt="{{'name'}}">
+        <h3>{{i['name']}}</h3>
+    </div>
+    {% endfor %}
+    <hr class="major" />
+</section>
+{% endblock %}
