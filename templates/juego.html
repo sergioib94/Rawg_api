@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %} {{juego.name}} {% endblock %}
+{% block content %}
+<section>
+    <header class="main">
+        <h2>{{juego.name}}</h2>
+    </header>
+</section>
+    {% if juego %}
+        <section>
+            <div class="image main">
+                <div class="tablacentral">
+                    <table>
+                        <tr>
+                            <th colspan="2">Released date: {{juego.released}}</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><img src="{{juego.background_image}}" alt="{{juego.name}}"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><p>Description:</p>{{juego.description_raw}}</td>
+                        </tr>
+                        <tr>
+                            <td><p>Platforms:</p>
+                                {% for plataforma in juego.platforms %}
+                                    {{plataforma.platform.name}}</br>
+                                {% endfor %}
+                            </td>
+                            <td><p>Genres:</p>
+                                {% for genero in juego.genres %}
+                                    {{genero.name}}</br>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Score: {{juego.metacritic}}</td>
+                            <td>Rating: {{juego.rating}}/5</td>
+                        </tr>
+                        <tr>
+                            <td><p>Developers: </p>
+                                {% for desarrolladores in juego.developers %}
+                                    {{desarrolladores.name}}</br>
+                                {% endfor %}
+                            </td>
+                            <td><p>Publisher:</p>
+                                {% for editor in juego.publishers %}
+                                    {{editor.name}}</br>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><p>Stores:</p>
+                                {% for stores in juego.stores%}
+                                    <a href="{{stores.url}}">{{stores.store.name}}</a></br>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}
