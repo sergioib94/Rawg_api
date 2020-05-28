@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %} Busqueda {% endblock %}
+{% block content %}
+<fieldset>
+        <form id="request" class="main_form" action="/" method="post">
+            <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                    <input placeholder="Buscar juego" type="text" name="name">
+                </div>
+            </div>
+            <div>
+                <button class="submit">Buscar</button>
+            </div>
+        </form>
+    </fieldset>
+<section>
+    {% for i in datos %}
+    <div class="image main">
+        <div class="tablacentral">
+            <table>
+                <tr>
+                    <td><img src="{{i['background_image']}}" alt="{{i['name']}}"></td>
+                </tr>
+                <tr>
+                    <td><h3>{{i['name']}}</h3></td>
+                </tr>
+                <tr>
+                    <td>Release date: {{i['released']}}</td>
+                </tr>
+                <tr>
+                    <td>Rating: {{i['rating']}}/5</td>
+                </tr>
+                <tr>
+                    <td><a href="/{{i['name']}}">{{i['name']}}</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    {% endfor %}
+    <hr class="major" />
+</section>
+{% endblock %}
