@@ -58,6 +58,29 @@
                     </table>
                 </div>
             </div>
+            <hr class="major" />
+        </section>
+        <section>
+            <div class="tablacentral">
+                <h3>Requirements Pc</h3>
+                <table>
+                    <tr>
+                        <td>
+                            {% for i in juego.platforms %}
+                                {{i.requirements.minimum}}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% for i in juego.platforms %}
+                                {{i.requirements.recommended}}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr class="major" />
         </section>
     {% endif %}
 {% endblock %}

@@ -26,9 +26,9 @@ def inicio():
                 datos.append(juego)
             return render_template("busqueda.html", datos=datos)
 
-@app.route('/<name>',methods=['GET'])
-def juego(name):
-    r=requests.get(URL_BASE + "/games/" + name)
+@app.route('/<slug>',methods=['GET'])
+def juego(slug):
+    r=requests.get(URL_BASE + "/games/" + slug)
     if r.status_code == 200:
         doc3=r.json()
         return render_template("juego.html",juego=doc3)

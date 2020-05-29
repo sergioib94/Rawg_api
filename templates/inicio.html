@@ -5,7 +5,7 @@
     <form id="request" class="main_form" action="/" method="post">
         <div class="row gtr-uniform">
             <div class="col-6 col-12-xsmall">
-                <input placeholder="Buscar juego" type="text" name="name">
+                <input placeholder="Buscar entre 397.666 juegos" type="text" name="name">
             </div>
         </div>
         <div>
@@ -36,7 +36,7 @@
                     <td>Rating: {{i['rating']}}/5</td>
                 </tr>
                 <tr>
-                    <td><a href="/{{i['name']}}">{{i['name']}}</a></td>
+                    <td><a href="/{{i['slug']}}">{{i['name']}}</a></td>
                 </tr>
             </table>
         </div>
