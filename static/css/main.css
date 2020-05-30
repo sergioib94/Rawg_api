@@ -2124,7 +2124,7 @@ input, select, textarea {
 		}
 
 			.image.main img {
-				width: 50%;
+				width: 100%;
 			}
 
 	a.image {
@@ -2503,11 +2503,13 @@ input, select, textarea {
 			}
 
 			table td img {
-				width: 40%;
-				height: 40%;
+				width: auto;
+				height: auto;
 			}
 
 			div.tablacentral table {
+				width: 60%;
+				height: 60%;
 				margin-bottom: 30%;
 				margin-top: 10%;
 				margin: auto;
