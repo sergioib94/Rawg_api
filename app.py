@@ -33,4 +33,5 @@ def juego(slug):
         doc3=r.json()
         return render_template("juego.html",juego=doc3)
 
-app.run(debug=True)
+port=os.environ["PORT"]
+app.run('0.0.0.0',int(port), debug=False)
